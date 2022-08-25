@@ -84,7 +84,7 @@ div.hero-container div.left-content div.text-content p {
   color: #F8F9FA;
 }
 div.hero-container div.left-content a#btn-shopnow {
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 1em 1em;
   margin: auto;
   justify-content: center;
@@ -277,7 +277,6 @@ div.about-container div.about-socials {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
   }
   div.hero-container div.left-content div.text-content {
     text-align: center;
@@ -294,9 +293,9 @@ div.about-container div.about-socials {
   div.hero-container div.left-content a#btn-shopnow {
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 20vmin;
     margin: 2em auto;
-    padding: 1.4em;
+    padding: 1.2em;
     border-radius: 0.7em;
     display: flex;
     font-weight: bold;
@@ -380,26 +379,20 @@ div.about-container div.about-socials {
   }
   div.hero-container div.left-content div.text-content h5 {
     text-align: left;
-    font-size: 28px;
+    font-size: 24px;
   }
   div.hero-container div.left-content div.text-content h1 {
     text-align: left;
-    font-size: 58px;
+    font-size: 38px;
   }
   div.hero-container div.left-content div.text-content p {
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
   }
   div.hero-container div.left-content div.col.text-center {
     display: flex;
     left: 0;
     float: left;
-  }
-  div.hero-container div.left-content div.col.text-center a#btn-shopnow {
-    text-align: center;
-    display: flex;
-    font-size: 20px;
-    width: 220px;
   }
   div.info-container {
     gap: 12em;

@@ -110,7 +110,7 @@ div.hero-container{
         }
       }
       a#btn-shopnow{
-        border-radius: 7px;
+        border-radius: 2px;
         padding: 1em 1em;
         margin: auto;
         justify-content: center;
@@ -349,7 +349,7 @@ div.about-container{
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-        max-width: 1200px;
+        // max-width: 1200px;
 
         div.left-content{
         div.text-content{
@@ -368,9 +368,9 @@ div.about-container{
         a#btn-shopnow{
             align-items: center;
             justify-content: center;
-            width: 30%;
+            width: 20vmin;
              margin: 2em auto;
-             padding: 1.4em;
+             padding: 1.2em;
              border-radius: .7em;
              display: flex;
              font-weight: bold;
@@ -503,12 +503,12 @@ nav{
             div.text-content{
                 h5{
                     text-align: left;
-                    font-size: 28px;
+                    font-size: 24px;
                 }h1{
                     text-align: left;
-                    font-size: 58px;
+                    font-size: 38px;
                 }p{
-                    font-size: 20px;
+                    font-size: 18px;
                     text-align: left;
                 }
             }
@@ -516,12 +516,6 @@ nav{
                 display: flex;
                 left: 0;
                 float: left;
-                a#btn-shopnow{
-                    text-align: center;
-                    display: flex;
-                    font-size: 20px;
-                    width: 220px;
-                }
             }
            
         }
