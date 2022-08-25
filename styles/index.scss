@@ -43,9 +43,9 @@ nav{
     }
 
     ul{     
-      padding-top: 1em;  
         li.nav-item{
           text-align: center;
+          padding-top: .2em;
           margin-bottom: .7em;
             a{  
                  color: #212529;
@@ -156,6 +156,9 @@ div.search-container{
     padding-top: 2.4em;
     justify-content: center;
     form{
+        input{
+            border-radius: 12px;
+        }
       label{
         font-size: 14px;
       }
@@ -165,9 +168,14 @@ div.search-container{
       justify-content: center;
       align-items: center;
       button{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
         background: $btn-yellow;
         color: $font-white;
         font-weight: bold;
+        border-radius: 7px;
       }
     }
 
@@ -279,10 +287,28 @@ div.about-container{
         font-size: 1.4em;
     }
 }
+@media screen and (min-width: 550px){
+    div.item-container{
+        div.card{
+            p{
+                font-size: 14px;
+            }
+            a{
+                padding: .7em;
+                font-size: 14px;
+            }
+        }
+    }
 
+    div.about-container{
+        p{
+            font-size: 14px;
+        }
+        
+    }
+}
 
 @media screen and (min-width: 688px){
-
     //BUTTON SHOP NOW
     div.hero-container{
         div.left-content{
@@ -323,7 +349,6 @@ div.about-container{
 
 // TABLET VIEW 768
 @media screen and (min-width: 768px){
-
     //NAVIGATION SECTION
     nav{
         div.logo{
@@ -356,9 +381,12 @@ div.about-container{
             h1{
                 font-size: 46px;
             }
+            p{
+                font-size: 20px;
+            }
         }
 
-        a.btn-dark{
+        a#btn-shopnow{
             align-items: center;
             justify-content: center;
             width: 30%;
@@ -370,89 +398,18 @@ div.about-container{
              text-decoration: none;
          }
      }
-
-        div.right-content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            div.bg-hero img{
-                margin-top: 2em;
-                display: block;          
-                width: 100%;
-            }
-        }
     }
 
-    //SEARCH BAR
-    div.search-container{
-        input.form-control{
-            padding: 1em;
-        }
-        a{
-            i.bi.bi-bag-check{
-                font-size: 1.7em;
-            }
-        }
-     }
-
-    //DROP DOWN SECTION
-    div.dropdown{
-        padding: 0 2.4em;
+    div.info-container{
+        gap: 7em;
     }
 
-    //STORE INFO
-    div.store-info{
-        display: flex;
-        margin-bottom: 4em;
-        justify-content: center;
-        align-items: center;
-        padding: 3em 7em;
-      
-        div.info-container{
-            justify-content: space-between;
-            display: flex;
-          
-            div.truck-container{
-                padding: 0 2em;
-                text-align: center;
-                i{
-                    font-size: 20px;
-                }
-            }
-            div.open-container{
-                padding: 0 2em;
-                text-align: center;
-                i{
-                    font-size: 20px;
-                }
-            }
-            div.loc-container{
-                padding: 0 2em;
-                text-align: center;
-                i{
-                    font-size: 20px;
-                }
-            }
+    //CATEGORIES SECTION
+    div.categories-container{
+        h5.shopCateg{
+            font-size: 20px;
         }
     }
-
-        //CATEGORIES SECTION
-        p.shopCateg{
-            font-size: 14px;
-            padding: 2em 3em;
-        }
-
-        div.item-container{
-
-            div.card{
-                div.body-card{
-                    padding-top: 4em;
-                }
-               
-            }
-        }
-
     //CATEGORY SECTION
     div.swiper{
         div.swiper-wrapper{
@@ -509,25 +466,22 @@ div.item-container{
 }
 
 @media screen and (min-width: 992px){
-
 //NAVIGATION SECTION
 nav{
- padding: 0 1em;
- display: flex;
+    padding: 0 1em;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     div.logo{
-       
-       h1{
-        font-size: 20px;
-        font-weight: bold;
-       }
-       span.ent{
+        max-width: 942px;
+        img{
+        max-width: 912px;
+        }
+        span.ent{
         font-size: 16px;
         letter-spacing: 5px;
-       }
+        }
     }
-
     ul{
         li.nav-item{
             a.btnRegister{
@@ -538,8 +492,10 @@ nav{
             }
             a.btnRegister:hover{
                 background: #0853c4;
-              
                 transition: 0.4s;
+            }
+            a.home{
+                font-size: 32px;
             }
         }
     }
@@ -548,34 +504,77 @@ nav{
         ul.navbar-nav{
             margin-left: auto;
             li.nav-item a{
-                font-size: 16px;
+                font-size: 20px;
                 margin-left: 2em;
             }
           }
          }
        }
 
-       //BUTTON SHOP NOW
+       //HERO CONTENT
        div.hero-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 'left-content right-content';
         div.left-content{
-        a.btn-dark{     
-         width: 20%;
-         padding: 1.4em;
-         }
-      }
-    }
-
-       //SEARCH BAR
-       div.search-container{
-        width: 50%;
-        margin: auto;
-        input.form-control{
-            padding: 1em;
-        }
-        a{
-            i.bi.bi-bag-check{
-                font-size: 2em;
+            grid-area: 'left-content';
+            div.text-content{
+                h5{
+                    text-align: left;
+                    font-size: 28px;
+                }h1{
+                    text-align: left;
+                    font-size: 58px;
+                }p{
+                    font-size: 20px;
+                    text-align: left;
+                }
             }
+            div.col.text-center{
+                display: flex;
+                left: 0;
+                float: left;
+                a#btn-shopnow{
+                    text-align: center;
+                    display: flex;
+                    font-size: 20px;
+                    width: 220px;
+                }
+            }
+           
+        }
+       }
+
+       //STORE INFO
+       div.info-container{
+            gap: 12em;
+            h5{
+                font-size: 16px;
+            }
+            p{
+                font-size: 16px;
+            }
+       }
+
+       // SEARCH CONTAINER
+       div.search-container{
+        // padding-top: 3.7em;
+        height: 37vh;
+        div.search-bar{
+            padding: 5.4em 7em;
+            form{
+                label{
+                    font-size: 18px;
+                }
+                input{
+                    padding: 1em;
+
+                }
+            }
+        }
+        button{
+            padding: 0 2em;
+            font-size: 20px;
         }
        }
 
@@ -585,24 +584,13 @@ nav{
         font-weight: 500;
      }
 
-     //DROP DOWN
-     div.dropdown{
-        padding: 0 3em;
-     }
 }
 
 // LAPTOP VIEW 1200
 @media screen and(min-width: 1200px){
-
-
 //Navigation
 nav{
     padding: 0 5em;
-}
-
-//SEARCH BAR
-div.search-container{
-    padding: 2em 5em;
 }
 
 //HERO SECTION
@@ -611,35 +599,8 @@ div.hero-container{
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    margin-bottom: 4em;
     justify-content: left;
     align-items: center;
-
-    div.left-content{
-
-    div.text-content{
-        max-width: 1500px;
-        text-align: left;
-        h5{
-            text-align: left;
-            font-size: 26px;
-        }
-        h1{
-            text-align: left;
-            font-size: 46px;
-        }
-    }
-
-    a.btn-dark{
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 40%;
-        padding: 1em;
-         font-weight: bold;
-     }
- }
 
     div.right-content{
         margin: 0 auto;
@@ -655,44 +616,66 @@ div.hero-container{
         }
     }
 
-    //CATEGORIES SECTION
-    p.shopCateg{
-        font-weight: 500;
-        padding: 0 6em;
-        font-size: 16px;
-        margin-bottom: 2em;
+    // INFO CONTAINER
+    div.info-container{
+        padding: 2em;
+        gap: 17em;
+        h5{
+            font-size: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
     }
 
-    //DROP DOWN
-    div.dropdown{
-        padding: 3em 6em;
+    // SEARCH BAR
+    div.search-container{
+        div.search-bar{
+            form{
+                label{
+                    font-size: 20px;
+                }
+                input{
+                    font-size: 20px;
+                    padding: 1em;
+                }
+            }
+        }
+    }
+
+    //CATEGORIES SECTION
+    div.categories-container{
+        h5.shopCateg{
+            font-weight:700;
+            font-size: 26px;
+            margin-bottom: 2em;
+        }
     }
 
     div.swiper{
         // width: 100%;
-      
-        div.swiper-wrapper{
-          
-            div.swiper-slide{
-                // border: solid color(bg-font) 2px;
-                border-radius: 1em;
-                padding-top: 2em;
-                img{
-                    width:20%;
-                }
-                p{
-                    font-size: 18px;
-                }
+    div.swiper-wrapper{
+        div.swiper-slide{
+            // border: solid color(bg-font) 2px;
+            border-radius: 1em;
+            padding-top: 2em;
+            margin-bottom: 3em;
+            img{
+                width:20%;
+            }
+            p{
+                font-size: 18px;
             }
         }
+
+    }
             
-        div.swiper-button-next{
+    div.swiper-button-next{
+    padding: 0 7em;
+    }
+    div.swiper-button-prev{
         padding: 0 7em;
         }
-        div.swiper-button-prev{
-            padding: 0 7em;
-            }
-
     }
 
     //ITEMS SECTION
