@@ -133,6 +133,7 @@ div.search-container div.search-bar form {
   align-items: center;
 }
 div.search-container div.search-bar form input {
+  border: solid #858585 1px;
   border-radius: 12px;
 }
 div.search-container div.search-bar form label {
@@ -248,22 +249,6 @@ div.about-container div.about-socials {
   }
 }
 @media screen and (min-width: 688px) {
-  div.hero-container div.left-content a.btn-dark {
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    margin: 2em auto;
-    padding: 1.4em;
-    border-radius: 0.7em;
-    display: flex;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  div.dropdown {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-  }
   div.item-container {
     justify-content: center;
     align-items: center;
@@ -273,6 +258,9 @@ div.about-container div.about-socials {
   }
   div.item-container div.card {
     margin: auto;
+  }
+  div.swiper div.swiper-wrapper div.swiper-slide img {
+    width: 40%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -315,7 +303,10 @@ div.about-container div.about-socials {
     text-decoration: none;
   }
   div.info-container {
-    gap: 7em;
+    gap: 12em;
+  }
+  div.search-container div.search-bar {
+    margin: 0 4em;
   }
   div.categories-container h5.shopCateg {
     font-size: 20px;
@@ -327,7 +318,8 @@ div.about-container div.about-socials {
     font-size: 18px;
   }
   div.item-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1em;
@@ -359,32 +351,17 @@ div.about-container div.about-socials {
 @media screen and (min-width: 992px) {
   nav {
     padding: 0 1em;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
   }
-  nav div.logo {
-    max-width: 942px;
+  nav a.navbar-brand {
+    width: 0;
   }
-  nav div.logo img {
-    max-width: 912px;
+  nav ul.navbar-nav li.nav-item {
+    text-align: center;
+    align-items: center;
   }
-  nav div.logo span.ent {
-    font-size: 16px;
-    letter-spacing: 5px;
-  }
-  nav ul li.nav-item a.btnRegister {
-    color: #FFFFFF;
-    border-radius: 0.4em;
-    padding: 0.6em;
-    background: #0d6efd;
-  }
-  nav ul li.nav-item a.btnRegister:hover {
-    background: #0853c4;
-    transition: 0.4s;
-  }
-  nav ul li.nav-item a.home {
-    font-size: 32px;
+  nav ul.navbar-nav i {
+    font-size: 26px;
   }
   nav div.collapse ul.navbar-nav {
     margin-left: auto;
@@ -453,6 +430,10 @@ div.about-container div.about-socials {
     font-size: 18px;
     font-weight: 500;
   }
+  div.item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1200px) {
   nav {
@@ -472,11 +453,6 @@ div.about-container div.about-socials {
     justify-content: center;
     align-items: center;
   }
-  div.hero-container div.right-content div.bg-hero img {
-    display: flex;
-    justify-content: right;
-    display: flex;
-  }
   div.info-container {
     padding: 2em;
     gap: 17em;
@@ -495,6 +471,7 @@ div.about-container div.about-socials {
     padding: 1em;
   }
   div.categories-container h5.shopCateg {
+    padding: 0 2em;
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 2em;
@@ -510,20 +487,13 @@ div.about-container div.about-socials {
   div.swiper div.swiper-wrapper div.swiper-slide p {
     font-size: 18px;
   }
-  div.swiper div.swiper-button-next {
-    padding: 0 7em;
-  }
-  div.swiper div.swiper-button-prev {
-    padding: 0 7em;
-  }
   div.item-container {
     padding: 3em 6em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   div.about-container div.about-text p {
-    padding: 0 12em;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -550,33 +520,55 @@ div.about-container div.about-socials {
     font-size: 20px;
     padding: 0 5em;
   }
-  div.item-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
   div.item-container div.card div.card-body img {
     margin: auto;
     justify-content: center;
     width: 10%;
   }
   div.item-container div.card div.card-body h5 {
-    font-size: 18px;
+    font-size: 24px;
   }
   div.item-container div.card div.card-body p {
-    font-size: 14px;
+    font-size: 20px;
   }
   div.item-container div.card div.card-body a {
-    font-size: 12px;
+    font-size: 20px;
+  }
+  div.about-container div.about-text p {
+    padding: 0px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1390px) {
+  nav {
+    padding: 0 12em;
+  }
   div.hero-container {
-    max-width: 1280;
-    padding: 4em 2em;
+    padding-top: 4em;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  div.hero-container div.left-content {
+    padding: 0 8em;
+  }
+  div.search-container {
+    height: 50vmin;
+  }
+  div.search-container div.search-bar {
+    margin: 0 12em;
+  }
+  div.search-container div.search-bar form input {
+    border: solid #858585 1px;
+    padding: 0.7em;
+  }
+  div.categories-container h5.shopCateg {
+    padding: 0 7em;
   }
   div.item-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 12em;
   }
   div.item-container div.card div.card-body img {
     margin: auto;
@@ -591,5 +583,8 @@ div.about-container div.about-socials {
   }
   div.item-container div.card div.card-body a {
     font-size: 14px;
+  }
+  div.about-container div.about-text p {
+    padding: 0 12em;
   }
 }/*# sourceMappingURL=index.css.map */

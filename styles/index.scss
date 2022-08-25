@@ -157,6 +157,7 @@ div.search-container{
     justify-content: center;
     form{
         input{
+            border: solid $font-gray 1px;
             border-radius: 12px;
         }
       label{
@@ -192,11 +193,6 @@ div.categories-container{
 
 
 }
-
-// p.shopCateg{
-//     font-size: 14px;
-//     padding: 1em 2em;
-// }
 div.swiper{
     padding: 1em 1em;
     margin-bottom: 2em;
@@ -219,10 +215,6 @@ div.swiper{
             font-size: 14px;
         }
     }
-    // .swiper-button-next{
-    // top: 1;
-    
-    // }
 }
 
 //ITEM SECTION
@@ -309,30 +301,6 @@ div.about-container{
 }
 
 @media screen and (min-width: 688px){
-    //BUTTON SHOP NOW
-    div.hero-container{
-        div.left-content{
-            a.btn-dark{
-                align-items: center;
-                justify-content: center;
-                 width: 30%;
-                 margin: 2em auto;
-                 padding: 1.4em;
-                 border-radius: .7em;
-                 display: flex;
-                 font-weight: bold;
-                 text-decoration: none;
-             }
-        }
-    }
-
-    div.dropdown{
-        
-        display: flex;
-        justify-content: center;
-        font-size: 14px;
-    }
-
     //ITEM SECTION
     div.item-container{
       justify-content: center;
@@ -344,6 +312,18 @@ div.about-container{
       div.card{
         margin: auto;
       }
+    }
+
+    // SWIPER
+    div.swiper{
+        div.swiper-wrapper{
+            div.swiper-slide{
+                img{
+                    width: 40%;
+                }
+             
+            }
+        }
     }
 }
 
@@ -372,7 +352,6 @@ div.about-container{
         max-width: 1200px;
 
         div.left-content{
-
         div.text-content{
             text-align: center;
             h5{
@@ -401,7 +380,14 @@ div.about-container{
     }
 
     div.info-container{
-        gap: 7em;
+        gap: 12em;
+    }
+
+    // SEARCH BAR
+    div.search-container{
+        div.search-bar{
+            margin: 0 4em;
+        }
     }
 
     //CATEGORIES SECTION
@@ -427,12 +413,11 @@ div.about-container{
 
 //ITEM SECTION
 div.item-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1em;
-
-
     div.card{
         padding-top: 3em;
         margin-bottom: 4em;
@@ -469,35 +454,32 @@ div.item-container{
 //NAVIGATION SECTION
 nav{
     padding: 0 1em;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    div.logo{
-        max-width: 942px;
-        img{
-        max-width: 912px;
-        }
-        span.ent{
-        font-size: 16px;
-        letter-spacing: 5px;
+    a.navbar-brand{
+        width: 0;
+    }
+    ul.navbar-nav{
+        li.nav-item{
+            text-align: center;
+            align-items: center;
+            // a.btnRegister{
+            //     color: #FFFFFF;
+            //     border-radius: .4em;
+            //     padding: .6em;
+            //     background: #0d6efd;
+            // }
+            // a.btnRegister:hover{
+            //     background: #0853c4;
+            //     transition: 0.4s;
+            // }
+  
         }
     }
-    ul{
-        li.nav-item{
-            a.btnRegister{
-                color: #FFFFFF;
-                border-radius: .4em;
-                padding: .6em;
-                background: #0d6efd;
-            }
-            a.btnRegister:hover{
-                background: #0853c4;
-                transition: 0.4s;
-            }
-            a.home{
-                font-size: 32px;
-            }
+    ul.navbar-nav{
+        i{
+            font-size: 26px;
         }
+     
     }
 
     div.collapse{
@@ -568,7 +550,6 @@ nav{
                 }
                 input{
                     padding: 1em;
-
                 }
             }
         }
@@ -584,6 +565,10 @@ nav{
         font-weight: 500;
      }
 
+     div.item-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
 }
 
 // LAPTOP VIEW 1200
@@ -607,12 +592,6 @@ div.hero-container{
           width: 100%;
             justify-content: center;
             align-items: center;
-
-        div.bg-hero img{
-            display: flex;
-            justify-content: right; 
-            display: flex;
-           }
         }
     }
 
@@ -646,6 +625,7 @@ div.hero-container{
     //CATEGORIES SECTION
     div.categories-container{
         h5.shopCateg{
+            padding: 0 2em;
             font-weight:700;
             font-size: 26px;
             margin-bottom: 2em;
@@ -656,7 +636,6 @@ div.hero-container{
         // width: 100%;
     div.swiper-wrapper{
         div.swiper-slide{
-            // border: solid color(bg-font) 2px;
             border-radius: 1em;
             padding-top: 2em;
             margin-bottom: 3em;
@@ -666,15 +645,7 @@ div.hero-container{
             p{
                 font-size: 18px;
             }
-        }
-
-    }
-            
-    div.swiper-button-next{
-    padding: 0 7em;
-    }
-    div.swiper-button-prev{
-        padding: 0 7em;
+         }
         }
     }
 
@@ -682,15 +653,14 @@ div.hero-container{
     div.item-container{
         padding: 3em 6em;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     //ABOUT CONTAINER
     div.about-container{
         div.about-text{
             p{
-                padding: 0 12em;
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }
@@ -698,7 +668,6 @@ div.hero-container{
 
 // DESKTOP VIEW 1280
 @media screen and (min-width: 1280px){
-
 //NAVIGATION
     nav{
         a.navbar-brand{
@@ -728,10 +697,10 @@ div.hero-container{
                   font-size: 70px;          
                 }
             }
-                    a.btn-dark{               
-                        width: 30%;
-                        padding: 1em;             
-                     }
+            a.btn-dark{               
+                width: 30%;
+                padding: 1em;             
+                }
         }
     }
 
@@ -741,13 +710,9 @@ div.hero-container{
         padding: 0 5em;
     }
 
-    //ITEM LIST
+    // ITEM LIST
     div.item-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        
         div.card{
-           
             div.card-body{
                 img{
                     margin: auto;
@@ -755,34 +720,81 @@ div.hero-container{
                     width: 10%;
                 }
                 h5{
-                    font-size: 18px;
+                    font-size: 24px;
                 }
                 p{
-                    font-size: 14px;
+                    font-size: 20px;
                 }
                 a{
-                    font-size: 12px;
+                    font-size: 20px;
                 }
             }
+        }
+    }
+
+    // ABOUT
+    div.about-container{
+        div.about-text{
+            p{
+                padding: 0px;
+                font-size: 20px;
+            }
+          
         }
     }
 }
 
 @media screen and (min-width: 1390px){
-
+    // NAVIGATION
+    nav{
+        padding: 0 12em;
+        // ul{
+        //     li.nav-item{
+        //         i{
+        //             font-size: 24px;
+        //         }
+        //     }
+        // }
+    }
     //HERO SECTION
     div.hero-container{
-        max-width: 1280;
-        padding: 4em 2em;
+        padding-top: 4em;
+        height: 100vh;
+        display: grid;
+        grid-template-columns:  2fr 1fr;
+        div.left-content{
+            padding: 0 8em;
+        }
+       
+    }
+
+    //SEARCH BAR
+    div.search-container{
+        height: 50vmin;
+        div.search-bar{
+               margin: 0 12em;
+               form{
+                input{
+                    border: solid $font-gray 1px;
+                    padding: .7em;
+                }
+               }
+        }
+    }
+
+    // CATEGORIES CONTAINER
+    div.categories-container{
+        h5.shopCateg{
+            padding: 0 7em;
+        }
     }
 
   //ITEM LIST SECTION
   div.item-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    padding: 0 12em;
     div.card{
-       
         div.card-body{
             img{
                 margin: auto;
@@ -801,4 +813,13 @@ div.hero-container{
         }
     }
 }
+
+// ABOUT CONTAINER
+    div.about-container{
+        div.about-text{
+            p{
+                padding: 0 12em;
+            }
+        }
+    }
 }
