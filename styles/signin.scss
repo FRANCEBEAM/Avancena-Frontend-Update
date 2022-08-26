@@ -1,0 +1,251 @@
+// nav{
+//   a.navbar-brand{
+//     img{
+//       max-width: 176px;
+//     }
+//   }
+// }
+//NAVIGATION SECTION
+nav{
+  box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  -webkit-box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  -moz-box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  padding: 0 1em;
+  a.navbar-brand{
+    width: 50%;
+    img{
+      max-width: 176px;
+    }
+  }
+
+  ul{     
+      li.nav-item{
+        text-align: center;
+        padding-top: .2em;
+        margin-bottom: .7em;
+          a{  
+               color: #212529;
+              text-decoration: none;
+              list-style: none;
+          }
+      }
+  }
+
+  div.collapse{
+     ul.navbar-nav{
+      li.nav-item{
+          a.home:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.shop:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.about:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.login:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+         }
+      }
+
+  }
+}
+
+div.main-container{
+  background: #FFFFFF;
+  height: 100%;
+}
+
+div.form-container{
+  padding: 2em 1em;
+
+  div.left-content{
+    img{
+      max-width: 400px;
+      margin: auto;
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+    div.hello-welcome{
+      display: none;
+    }
+   
+    h1{
+      text-align: center;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    p{
+      margin-top: 1em;
+      font-size: 18px;
+      padding: 0 2em;
+      text-align: center;
+    }
+  }
+
+  div.right-content{
+    h1{
+      display: none;
+    }
+    p{
+      display: none;
+    }
+    form{
+      label{
+        font-size: 18px;
+        font-weight: 700;
+      }
+      input{
+        border-radius: 7px;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 912px){
+  nav{
+    padding: 0 1em;
+    align-items: center;
+    a.navbar-brand{
+        width: 0;
+    }
+    ul.navbar-nav{
+        li.nav-item{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    ul.navbar-nav{
+        i{
+            font-size: 26px;
+        }
+     
+    }
+
+    div.collapse{
+        ul.navbar-nav{
+            margin-left: auto;
+            li.nav-item a{
+                font-size: 20px;
+                margin-left: 2em;
+            }
+          }
+         }
+       }
+
+  div.main-container{
+    background-image: linear-gradient(to right, #2882FF , #4160CB);
+    height: 100vh;
+  }
+  // nav{
+  //   padding: 0 3em;
+  // }
+  div.form-container{
+    height: 80vh;
+    padding: 5em 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div.left-content{
+      border-radius: 17px 0 0 17px;
+      padding: 1em;
+      background: #E6E7E6;
+      div.hello-welcome{
+        h1{
+          text-align: center;
+          margin-top: 1em;
+          font-size: 20px;
+        }
+        p{   
+          font-size: 18px;
+        }
+        display: block;
+      }
+      div.sign-mob{
+        display: none;
+      }
+      img{
+        padding-top: 4em;
+      }
+    }
+    div.right-content{
+      padding: 1em;
+      border-radius: 0 17px 17px 0;
+      background: #FFFFFF;
+      form{
+        padding: 0 1em;
+        h1{
+          margin-top: 1em;
+          font-size: 20px;
+          display: block;
+          font-weight: 700;
+        }
+        p{
+          font-size: 18px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px){
+  nav{
+    padding: 0 5em;
+  }
+
+  div.main-container{
+    div.form-container{
+      padding: 5em 6em;
+      div.left-content{
+        border-radius: 17px 0 0 17px;
+      }
+      div.right-content{
+        border-radius: 0 17px 17px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1390px){
+  nav{
+    padding: 0 12em;
+  }
+
+  div.main-container{  
+    height: 100vh;
+    div.form-container{
+      padding: 4em 26em;
+    }
+    
+  }
+}
+
+@media screen and (min-width: 1490px){
+  nav{
+    padding: 0 12em;
+  }
+
+  div.main-container{  
+    height: 100vh;
+    div.form-container{
+      padding: 4em 22em;
+      div.left-content{
+        h1{
+          margin-top: 2em;
+        }
+      }
+      div.right-content{
+        h1{
+          margin-top: 2.2em;
+        }
+      }
+    }
+    
+  }
+}

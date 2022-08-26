@@ -1,0 +1,227 @@
+nav{
+  box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  -webkit-box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  -moz-box-shadow: -1px 6px 59px -35px rgba(41,41,41,0.75);
+  padding: 0 1em;
+  a.navbar-brand{
+    width: 50%;
+    img{
+      max-width: 176px;
+    }
+  }
+
+  ul{     
+      li.nav-item{
+        text-align: center;
+        padding-top: .2em;
+        margin-bottom: .7em;
+          a{  
+               color: #212529;
+              text-decoration: none;
+              list-style: none;
+          }
+      }
+  }
+
+  div.collapse{
+     ul.navbar-nav{
+      li.nav-item{
+          a.home:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.shop:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.about:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+          a.login:hover{
+              color: color(bg-orange);
+              transition: 0.4s;
+          }
+        }
+      }
+  }
+}
+
+div.main-container{
+  div.form-container{
+    padding: 0 1em;
+    div.tabimg-container{
+      display: none;
+    }
+    div.left-content{
+      padding-top: 3em;
+    }
+    div.right-content{
+      h1{
+        font-weight: 700;
+      }
+      p{
+        text-align: center;
+      }
+      form{
+        label{
+          font-weight: 700;
+        }
+       p{
+        margin-bottom: 3em;
+       }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 912px){
+  nav{
+    padding: 0 1em;
+    align-items: center;
+    a.navbar-brand{
+        width: 0;
+    }
+    ul.navbar-nav{
+        li.nav-item{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    ul.navbar-nav{
+        i{
+            font-size: 26px;
+        }
+     
+    }
+
+    div.collapse{
+        ul.navbar-nav{
+            margin-left: auto;
+            li.nav-item a{
+                font-size: 20px;
+                margin-left: 2em;
+            }
+          }
+         }
+       }
+
+       div.main-container{
+        height: 100vh;
+        background: #DDDDDD;
+      }
+
+      div.form-container{
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div.left-content{
+       
+          border-radius: 17px 0 0 17px;
+          padding: 1em;
+          background: #E6E7E6;
+
+          div.tabimg-container{
+            display: block;
+            img{
+              display: block;
+              margin: auto;
+              justify-content: center;
+              align-items: center;
+            }
+            h1{
+              text-align: center;
+              margin-top: 1em;
+              font-size: 20px;
+              font-weight: 700;
+            }
+            p{   
+              text-align: center;
+              font-size: 18px;
+            }
+        
+          }
+          div.sign-mob{
+            display: none;
+          }
+          img{
+            padding-top: 4em;
+          }
+        }
+        div.right-content{
+          padding: 1em;
+          border-radius: 0 17px 17px 0;
+          background: #FFFFFF;
+          form{
+            padding: 0 1em;
+            label.userLabel{
+              margin-top: 3em;
+            }
+            h1{
+              display: none;
+            }
+            p{
+              display: none;
+            }
+          }
+        }
+      }
+}
+
+@media screen and (min-width: 1200px){
+  nav{
+    padding: 0 5em;
+  }
+
+  div.main-container{
+    div.form-container{
+      padding: 5em 6em;
+      div.left-content{
+        border-radius: 17px 0 0 17px;
+      }
+      div.right-content{
+        border-radius: 0 17px 17px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1390px){
+  nav{
+    padding: 0 12em;
+  }
+
+  div.main-container{  
+    height: 100vh;
+    div.form-container{
+      padding: 4em 26em;
+    }
+    
+  }
+}
+
+@media screen and (min-width: 1490px){
+  nav{
+    padding: 0 12em;
+  }
+
+  div.main-container{  
+    height: 100%;
+    div.form-container{
+      padding: 1em 22em;
+      div.left-content{
+        h1{
+          margin-top: 2em;
+        }
+      }
+      div.right-content{
+        h1{
+          margin-top: 2.2em;
+        }
+      }
+    }
+    
+  }
+}
+
+
